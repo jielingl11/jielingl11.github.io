@@ -19,6 +19,7 @@ https://www.tooplate.com/view/2131-wedding-lite
   --p-color:                      #717275;
   --border-color:                 #e9eaeb;
   --icon-color:                   #28856b;
+  
 
   --body-font-family:             'Source Sans Pro', sans-serif;
   --title-font-family:            'Amatic SC', cursive;
@@ -412,17 +413,19 @@ strong {
   HERO              
 -----------------------------------------*/
 .hero-container {
-  background-color: #d9d8d6;
-  background-image: url('../images/couple-hugging-laughing-near-wall.png');
+  /*background-color: #d9d8d6;*/
+  background-color:#e9c648;
+  background-image: url('../images/cat3.png');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: left top;
   border-radius: var(--border-radius-small);
-  position: relative;
+  position: left;
   overflow: hidden;
   padding: 50px;
   height: calc(90vh - 98px);
 }
-
+ 
 .hero-container h2 {
   color: var(--custom-btn-bg-color);
 }
