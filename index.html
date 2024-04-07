@@ -166,10 +166,16 @@ Free Bootstrap 5 HTML Template
                         <!-- SleepWell -->
                         <div class="col-lg-8 offset-lg-2">
                             <div class="section-block">
-                                <h3 style="color: #cb7575;">1. Real-Time Sleep Stage Detection Algorithm Development (2023-2024)</h3>
+                                <h3 style="color:  #005746;">1. Real-Time Sleep Stage Detection Algorithm Development (2023-2024)</h3>
                                 <p> 
-                                    The sleep stages can be classifed into five categories: 
-                                    Awake, NREM (N1, N2, N3) and REM
+                                    Nightly sleep patterns play an important role in clinically evaluating sleep quality.
+                                    These patterns are commonly characterised by distinct sleep stages quantifiable 
+                                    through EEG measurements. Stage stages (Awake, N1, N2, N3, REM), traditionally, 
+                                    are classified by sleep technicians throughout all-night EEG recordings. While this 
+                                    method is accurate, it is, however, time-consuming. In response, the project aims to 
+                                    develop an AI-based sleep stage classifier capable of automating and expediting this 
+                                    classification process. The algorithm development comprises the process of artefact 
+                                    removal, feature extraction and ML algorithm development.
                                 </p>
                             </div>
                         </div>
@@ -179,8 +185,13 @@ Free Bootstrap 5 HTML Template
                         </div>
                         <div class="col-lg-8 offset-lg-2">
                             <p>
-                                Remove undesirable signals presented in the recorded EEG data. 
-                                <br> The methodology is
+                                EEG signals, when recorded, are susceptable to contamination from artefacts. These artefacts 
+                                are not inherent to the neural activity being measured but are introduced during the recording 
+                                process. It is crucial to remove artefacts as contaminated EEG data can profoundly affect the 
+                                analysis. Previous studies have employed various techniques to tackle this issue, including 
+                                Regression, ICA, BSS, and Wavelet Transform. 
+                                <br>
+                                <br> In this project, our methodology is 
                                 <br> ○  Notch filters for specific frequncy removal
                                 <br> ○  Implemented regression model to remove EOG disturbance
                                 <br> ○  Applied ICA to isolate significant signals from unwanted noise 
@@ -198,8 +209,11 @@ Free Bootstrap 5 HTML Template
                             <h4> Feature Extraction</h4>
                         </div>
                         <div class="col-lg-8 offset-lg-2">
-                            <p> Segmented collected data into epochs (30-second segamentation) and then extracted features in 
-                                time and frequency domains.
+                            <p> 
+                                The collected data are segmented into 30-second EEG signal segments. From each segment,
+                                time domain and frequency domain features are extracted. These features serve as inputs 
+                                for ML algorithms.
+
                             </p>
                         </div>
 
@@ -213,8 +227,8 @@ Free Bootstrap 5 HTML Template
                             <h4> ML Algorithm Development</h4>
                         </div>
                         <div class="col-lg-8 offset-lg-2">
-                            <p> Developed a Random Forest model to predict the sleep stages and optimised the model 
-                                performance.  
+                            <p> 
+                                With the extracted features, the ML model is trained to classify sleep stages.
                             </p>
                         </div>
 
@@ -223,19 +237,47 @@ Free Bootstrap 5 HTML Template
                             <div class="section-block">
                                 <br>
                                 <br>
-                                <h3 style="color: #cb7575;">2. Particle Moving Algorithm Development (2022)</h3>
-                                <li class="social-icon-item"><a href="https://github.com/jielingl11/Moving-Balls" class="social-icon-link bi-github"></a></li>
+                                <h3 style="color: #005746;">2. Particle Moving Algorithm Development (2022)</h3>
+                                <a href="https://github.com/jielingl11/Moving-Balls"> Github </a>
                                 <p> 
                                    
-                                Aimed to automate active particle (AP) creation in ABAQUS for a high-volume fraction 
-                                polymer matrix in lithium-ion batteries. Used Python scripts to algorithmically generate 
-                                AP coordinates to enhance the overall simulation process and accuracy.
+                                    Battery research has become of critical significance due to its important role in 
+                                    addressing energy and sustainability challenges. The increasing demand for portable 
+                                    electronics, electric vehicles and renewable energy storage solutions highlights the 
+                                    importance of developing efficient, durable and cost-effective batteries. 
+                                    
+                                    <br> Our research team focused on the field of computational modelling to improve battery 
+                                    performance. In our project, they used ABAQUS, an engineering software, to simulate the 
+                                    mechanical systems of cathodes in batteries. To visualise these systems, they needed to 
+                                    generate active particles (AP). I specifically contributed to automating the creation 
+                                    of APs in ABAQUS for a high-volume fraction polymer matrix in lithium-ion batteries. 
+                                    The involved developing Python scripts to algorithmically generate coordinates for the APs, 
+                                    which significantly streamlined the simulation process. 
+                                
                                 </p>
                             </div>
                         </div>
 
                         <div class="col-lg-8 offset-lg-2">
                             <h4> Methods</h4>
+                            <p>
+                                <br> 1.  N particles are generated inside a box (initial configuration). 
+                                Some of these particles might overlap so it is required to reposition.  
+                                <br> 2.  The overlapping particles are identified and an "overlap function f(x)" 
+                                is calculated, which takes the form "f(x) = a + b", where "a" and "b" are 
+                                individual overlaps between particles.
+                                <br> 3. Selecting one of these overlapping particles at random and moving it to 
+                                a new position within the box. This is done to try and reduce the overlap 
+                                between particles.
+                                <br> 4. Evaluating the move. If the move reduces the overall overlap, it is accepted; 
+                                otherwise, the move is rejected and the particle is returned to its original position.
+                                <br> 5. The process of moving particles is repeated until the overlap function f(x) 
+                                reaches zero, meaning no particles overlap. 
+                                <br> The process is typical of iterative algorithms used in statistical mechanics and 
+                                computational materials science to find the equilibrium states of systems. 
+                                <br>
+                                <br>
+                            </p>
                         </div>
 
                         <div class="col-lg-8 offset-lg-2">
@@ -247,6 +289,13 @@ Free Bootstrap 5 HTML Template
                         <div class="col-lg-8 offset-lg-2">
                             <br>
                             <h4> Results</h4>
+                            <br>
+                            <p>
+                                Initial configuration: spheres are clustered and arranged in a disordered manner. 
+                                <br> Final configuration:  the spheres are not overlapping with each other and have 
+                                settled into a more ordered arrangement.
+                            </p>
+                            <br>
                         </div>
 
                         <div class="col-lg-6 offset-lg-3">
@@ -278,18 +327,29 @@ Free Bootstrap 5 HTML Template
                             <div class="section-block">
                                 <br>
                                 <br>
-                                <h3 style="color: #cb7575;">1. Monte Carlo Stimulation for Compton Scattering(2023)</h3>
-                                <li class="social-icon-item"><a href="https://github.com/jielingl11/2D-Monte-Carlo-Simuation-for-Compton-Scattering" class="social-icon-link bi-github"></a></li>
+                                <h3 style="color: #005746;">1. Monte Carlo Simulation for Compton Scattering(2023)</h3>
+                                <a href=" https://github.com/jielingl11/2D-Monte-Carlo-Simuation-for-Compton-Scattering"> Github </a>
                                 <p> 
-                                    Created a program that simulates Compton scattering in 2D and generates random events with statistical 
-                                    distributions for photon positions, directions and angles.
+                                    Compton scattering is a phenomenon that occurs when a photon interacts with an outer orbital electron. 
+                                    This interaction results in the transfer of energy from the photon to the electron, causing the photon 
+                                    to be deflected from its original path. To investigate this process, our project involved both practical 
+                                    experiments and computational simulations. 
+
+                                    <br> During our practical experiment, we directed photons emitted by Cs-137 and meticulously measured the 
+                                    energies of the scattered photons across different angles. Meanwhile, in our computational simulations, we 
+                                    developed a program that generates random events with statistical distributions for photon positions, directions 
+                                    and angles to simulate this phenomenon in a 2D environment. By comparing our experimental findings with computational
+                                    simulations, we could obtain a comprehensive understanding of Compton Scattering. 
                                 </p>
                             </div>
                         </div>
 
                         <div class="col-lg-8 offset-lg-2">
                             <h4> Example</h4>
-                            <p>Random photon trajectories in one simulation</p>
+                            <p>
+                                The plot shows random paths of photons in one simulation. The rod represents an object that photons are interacting 
+                                with. The blue lines are the paths that photons take within the simulation. 
+                            </p>
                         </div>
 
                         <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-12">
@@ -303,12 +363,22 @@ Free Bootstrap 5 HTML Template
                             <div class="section-block">
                                 <br>
                                 <br>
-                                <h3 style="color: #cb7575;">2. Angular Analysis of the Decay \(B^{0}\rightarrow K^{*0}\mu^{+}\mu^{-}\)(2022)</h3>
-                                <li class="social-icon-item"><a href="https://github.com/sashakarabasova/TBPS-Team-5" class="social-icon-link bi-github"></a></li>
+                                <h3 style="color: #005746;">2. Angular Analysis of the Decay \(B^{0}\rightarrow K^{*0}\mu^{+}\mu^{-}\)(2022)</h3>
+                                <a href="https://github.com/sashakarabasova/TBPS-Team-5"> Github </a>
                                 <p> 
-                                    Studied the angular distribution of the final-state particles (muons and decay products)
-                                    to extract angular coefficients about the underlying physics. The goal is to deepen understanding 
-                                    of fundamental particle interactions within the Standard Model or uncover potential new physics phenomena.
+                                    The Standard Model (SM) is a framework to understand the behaviour of fundamental particles 
+                                    and their interactions through EM, weak and strong forces. In particle physics research, 
+                                    scientists test the predictions of the SM against experimental observations to ensure its 
+                                    consistency. Any deviations from expected patterns in these observations may indicate the 
+                                    presence of phenomena beyond the SM. 
+
+                                    <br> In this project, our primary focus was on investigating B meson decay using a large 
+                                    dataset collected from LHcb. Our goal was to analyse the coefficients of a specific angular 
+                                    distribution equation to uncover any deviations from the expected patterns predicted by the 
+                                    Standard Model. Our analysis included several steps: removing background noise from the signal, 
+                                    applying acceptance functions, fitting the data with the angular distribution equation, 
+                                    quantifying errors and ultimately comparing the results with those predicted by the Standard Model.
+                                
                                 </p>
                             </div>
                         </div>
@@ -316,6 +386,14 @@ Free Bootstrap 5 HTML Template
                         <div class="col-lg-8 offset-lg-2">
                             
                             <h4> Angular Distribution Equation</h4>
+                            <p>
+                                The angular distribution of B meson decay that we investigated. We analysed the coefficients to test 
+                                theoretical predictions. 
+
+                                <br><br> *These coefficients are also known as observables, referring to measurable quantities that can 
+                                be observed or detected in fundamental particle experiments. 
+
+                            </p>
                             <br>
                         </div>
 
@@ -328,6 +406,7 @@ Free Bootstrap 5 HTML Template
                         <div class="col-lg-8 offset-lg-2">
                             <br>
                             <h4> Methods</h4>
+                            <p> A structured approach to data processing and analysis in this project. </p>
                         </div>
 
                         <div class="col-lg-7 offset-lg-3">
@@ -341,10 +420,16 @@ Free Bootstrap 5 HTML Template
                             <div class="section-block">
                                 <br>
                                 <br>
-                                <h3 style="color: #cb7575;">3. Underwater Search and Rescue Strategies (2022-2023)</h3>
+                                <h3 style="color: #005746;">3. Underwater Search and Rescue Strategies (2022-2023)</h3>
                                 <p> 
-                                    Explored strategies for underwater search and rescue operation using Baysian 
-                                    Inference and Particle Swarm Optimisation.
+                                    The project explored strategies for underwater search and rescue operations, 
+                                    with a focus on employing Bayesian inference as a key approach. Bayesian Inference 
+                                    provided a robust framework for updating our beliefs and making probabilistic 
+                                    inferences based on observed data and prior knowledge. This facilitated iterative 
+                                    refinement of search strategies as new information emerged during operations. 
+                                    The investigation involved assessing the efficiency and effectiveness of search and 
+                                    rescue missions utilising Bayesian inference, contrasting its performance with random 
+                                    search.
                                 </p>
                             </div>
                         </div>
@@ -352,7 +437,7 @@ Free Bootstrap 5 HTML Template
                         <div class="col-lg-8 offset-lg-2">
                             <br>
                             <h4> Baysian Interference</h4>
-                            <p>Time-evolving color maps show increasing probability of target occurrence</p>
+                            <p>The plots are time-evolving color maps that show increasing probability of target occurrence</p>
                         </div>
 
                         <div class="col-lg-5 offset-lg-4">
@@ -366,10 +451,22 @@ Free Bootstrap 5 HTML Template
                             <div class="section-block">
                                 <br>
                                 <br>
-                                <h3 style="color: #cb7575;">4. Data Analysis for discovering the Higgs Boson (2022)</h3>
+                                <h3 style="color: #005746;">4. Data Analysis for discovering the Higgs Boson (2022)</h3>
                                 <p> 
-                                    Conducted simplified data analysis to discover the Higgs Boson and optimised for signal 
-                                    detection in a blind-selected high-probability region. 
+                                    Higgs boson is one of the fundamental particles associated with the quantum excitation 
+                                    of the Higgs field. The Higgs boson was not discovered until the ATLAS and CMS experiments 
+                                    at the Large Hadron Collider (LHC) in 2012. 
+
+                                    <br> Physicists are interested in the regions where the signal is more significant than 
+                                    merely the background. However, sometimes they might unintentionally optimise the analysis 
+                                    in certain regions that have a higher chance of rare decays happening to obtain expected 
+                                    results. To avoid such bias, blind analysis is presented. The regions that have more decay 
+                                    events than expected are blinded during the process of data analysis, and only the region 
+                                    satisfied with the criteria can be unblinded. 
+
+                                    <br> The project performed a simplified version of data analysis for discovering the Higgs 
+                                    boson. It aims to optimise the analysis in the region that has the highest chance of detecting 
+                                    the signal, where the region is selected by blind analysis. 
                                 </p>
                             </div>
                         </div>
@@ -377,7 +474,8 @@ Free Bootstrap 5 HTML Template
                         <div class="col-lg-8 offset-lg-2">
                             <br>
                             <h4> Programming Tool Creation</h4>
-                            <p> Created programming tools for integration and optimisation problems. 
+                            <p> We developed programming tools using numerical methods for solving integration and optimisation problems 
+                                in this project. These tools include 
                                 <br>
                                 <br> Integration:
                                 <br> ○ Trapezoidal Rule
@@ -394,9 +492,9 @@ Free Bootstrap 5 HTML Template
                         <div class="col-lg-8 offset-lg-2">
                             <br>
                             <h4> Blind Analysis</h4>
-                            <p> Determined the region where Higgs decay events significantly  
-                                surpass background and used signal significance (S) to quantify
-                                and identify the excess.
+                            <p> We pinpointed the region where Higgs decay events showed a significant surplus over background noise and 
+                                quantified this excess using signal significance (S). Through thorough data analysis, our goal was to 
+                                differentiate genuine Higgs decay occurrences from background events and noise.
 
                             </p>
                         </div>
@@ -412,11 +510,14 @@ Free Bootstrap 5 HTML Template
                             <div class="section-block">
                                 <br>
                                 <br>
-                                <h3 style="color: #cb7575;">5. Thermodynamics Snookered (2021)</h3>
-                                <li class="social-icon-item"><a href="https://github.com/jielingl11/Year-2-computing-project-" class="social-icon-link bi-github"></a></li>
+                                <h3 style="color: #005746;">5. Thermodynamics Snookered (2021)</h3>
+                                <a href="https://github.com/jielingl11/Year-2-computing-project-"> Github </a>
+                                <br> <a href="https://www.youtube.com/watch?v=4A13j60iiUA"> Video </a>
                                 <p> 
-                                    Developed an animation to simulate gas behaviour showcasing their thermodynamic interactions
-                                    and properties within the system. 
+                                    Utilising object-oriented programming (OOP) principles, we developed an animation to simulate gas behaviour. 
+                                    This dynamic visualisation enabled us to observe gas molecules' movements, collisions, and transformations 
+                                    in real-time in response to changes in temperature, pressure, and volume. Through this simulation, we verified 
+                                    the ideal gas law and Boltzmann distribution. 
                                 </p>
                             </div>
                         </div>
@@ -427,20 +528,7 @@ Free Bootstrap 5 HTML Template
                             </div>
                         </div>
 
-                        <!-- Web -->
-                        <div class="col-lg-8 offset-lg-2">
-                            <div class="section-block">
-                                <br>
-                                <br>
-                                <h3 style="color: #cb7575;">5. Web Scrapping (2020)</h3>
-                                <li class="social-icon-item"><a href="https://github.com/jielingl11/web-scrapping" class="social-icon-link bi-github"></a></li>
-                                <p> 
-                                
-                                Developed a web scraping program to retrieve companys' contact details from Google or Bing 
-                                search results. 
-                                </p>
-                            </div>
-                        </div>
+                    
 
                     </div>
                 </div>
